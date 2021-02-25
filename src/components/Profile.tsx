@@ -1,9 +1,9 @@
 import React from 'react';
-
+import styles from '../styles/components/Profile.module.css';
 export const Profile: React.FC = () => {
   return (
-    <div>
-      <img src="https://github.com/arubesu" alt="Bruno Souza" />
+    <div className={styles.profileContainer}>
+      <img src="https://picsum.photos/200" alt="Random Image" />
       <div>
         <strong>Bruno Souza</strong>
         <p>Level 1</p>
