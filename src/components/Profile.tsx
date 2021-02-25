@@ -6,7 +6,9 @@ export const Profile: React.FC = () => {
       <img src="https://picsum.photos/200" alt="Random Image" />
       <div>
         <strong>Bruno Souza</strong>
-        <p>Level 1</p>
+        <p>
+          <img src="icons/level.svg" alt="Level" />
+          Level 1</p>
       </div>
     </div>
   )
