@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../styles/components/Profile.module.css';
+
 export const Profile: React.FC = () => {
   return (
     <div className={styles.profileContainer}>
