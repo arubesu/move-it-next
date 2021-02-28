@@ -60,8 +60,9 @@ export const CountDown: React.FC = () => {
         hasFinished ? (
           <button
             disabled
-            className={styles.countdownButton}
+            className={`${styles.countdownButton} ${styles.countdownButtonFinished} `}
           >Ciclo Finalizado
+            <img src="icons/check-circle.svg" alt="Close" />
           </button>
         ) :
           (
@@ -74,6 +75,8 @@ export const CountDown: React.FC = () => {
                       type="button"
                       className={`${styles.countdownButton} ${styles.countdownButtonActive}`}
                     > Abandonar ciclo
+
+                      <img src="icons/x.svg" alt="Close" />
                     </button>
                   ) :
                   (
@@ -82,6 +85,7 @@ export const CountDown: React.FC = () => {
                       type="button"
                       className={styles.countdownButton}
                     >Iniciar ciclo
+                      <img src="icons/play.svg" alt="Play" />
                     </button>
                   )
               }</>
