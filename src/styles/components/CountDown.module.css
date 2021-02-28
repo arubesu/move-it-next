@@ -42,13 +42,19 @@
   margin-top: 2rem;
   align-items: center;
   justify-content: center;
-  border: 1;
+  border: 0;
   border-radius: 5px;
   background: var(--blue);
   color: var(--white);
   font-size: 1.25rem;
   font-weight: 600;
   transition: background-color 0.2s;
+}
+
+.countdownButton img {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 0.6rem;
 }
 
 .countdownButton:not(:disabled):hover {
@@ -69,4 +75,8 @@
   background: var(--white);
   color: var(--title);
   cursor: not-allowed;
+}
+
+.countdownButtonFinished {
+  border-bottom: 4px solid var(--green);
 }
