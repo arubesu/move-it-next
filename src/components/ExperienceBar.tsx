@@ -14,7 +14,7 @@ export const ExperienceBar: React.FC = () => {
 
   return (
     <header className={styles.experienceBar}>
-      <span>{currentExperience} xp</span>
+      <span>0 xp</span>
       <div>
         <div style={{ width: `${progressBar}%` }}></div>
         <span

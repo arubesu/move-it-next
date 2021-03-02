@@ -32,6 +32,7 @@ export const CountdownContextProvider: React.FC = ({ children }) => {
     clearTimeout(countDownTimeout);
     setActive(false);
     setTime(defaultStartTime);
+    setHasFinished(false);
   }
 
   useEffect(() => {

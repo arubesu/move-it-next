@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import challenges from '../../challenges.json';
 
 interface Challenge {
@@ -16,6 +16,7 @@ interface ChallengeContextData {
   levelUp: () => void;
   resetChallenge: () => void;
   startNewChallenge: () => void;
+  completeChallenge: () => void;
 }
 
 export const ChallengeContext = createContext({} as ChallengeContextData);
@@ -28,8 +29,26 @@ export const ChallengeContextProvider: React.FC = ({ children }) => {
 
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
+  useEffect(() => {
+    Notification.requestPermission();
+  }, [])
+
   const resetChallenge = () => {
     setCurrentChallenge(null);
+  }
+
+  const completeChallenge = () => {
+    if (!currentChallenge)
+      return;
+
+    let acquiredExperience = currentExperience + currentChallenge.amount;
+
+    if (acquiredExperience >= experienceToNextLevel) {
+      levelUp();
+      acquiredExperience -= experienceToNextLevel;
+    }
+    setCurrentExperience(acquiredExperience);
+    setChallengesCompleted(challengesCompleted + 1);
   }
 
   const levelUp = () => {
@@ -37,8 +56,21 @@ export const ChallengeContextProvider: React.FC = ({ children }) => {
   }
 
   const startNewChallenge = () => {
+
     const randomChallengeIndex = Math.floor(Math.random() * challenges.length);
-    setCurrentChallenge(challenges[randomChallengeIndex]);
+    let challenge = challenges[randomChallengeIndex]
+    setCurrentChallenge(challenge);
+
+    new Audio('/notification.mp3').play();
+
+    if (Notification.permission === 'granted') {
+      new Notification(
+        'Novo desafio 🎉',
+        {
+          body: `valendo ${challenge.amount} XP`,
+          icon: '/favicon.png'
+        });
+    }
   }
 
   return (
@@ -51,7 +83,8 @@ export const ChallengeContextProvider: React.FC = ({ children }) => {
         experienceToNextLevel,
         resetChallenge,
         levelUp,
-        startNewChallenge
+        startNewChallenge,
+        completeChallenge
       }
     }>
       {children}
