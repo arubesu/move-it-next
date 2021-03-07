@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import challenges from '../../challenges.json';
 import Cookie from 'js-cookie';
+import { LevelUpModal } from '../components/LevelUpModal';
 interface Challenge {
   type: 'eye' | 'body';
   amount: number;
@@ -17,6 +18,7 @@ interface ChallengeContextData {
   resetChallenge: () => void;
   startNewChallenge: () => void;
   completeChallenge: () => void;
+  closeModal: () => void;
 }
 
 interface ChallengeContextProps {
@@ -33,6 +35,7 @@ export const ChallengeContextProvider: React.FC = ({
   ...rest
 }: ChallengeContextProps) => {
   const [level, setLevel] = useState(rest.level ?? 1);
+  const [showModal, setShowModal] = useState(false);
   const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0);
   const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesCompleted ?? 0);
   const [currentChallenge, setCurrentChallenge] = useState(null);
@@ -49,6 +52,10 @@ export const ChallengeContextProvider: React.FC = ({
     Cookie.set('challengesCompleted', String(challengesCompleted));
 
   }, [level, currentExperience, challengesCompleted]);
+
+  const closeModal = () => {
+    setShowModal(false);
+  }
 
   const resetChallenge = () => {
     setCurrentChallenge(null);
@@ -70,6 +77,7 @@ export const ChallengeContextProvider: React.FC = ({
 
   const levelUp = () => {
     setLevel(level + 1);
+    setShowModal(true);
   }
 
   const startNewChallenge = () => {
@@ -101,10 +109,16 @@ export const ChallengeContextProvider: React.FC = ({
         resetChallenge,
         levelUp,
         startNewChallenge,
-        completeChallenge
+        completeChallenge,
+        closeModal
       }
     }>
       {children}
+
+      { showModal &&
+        <LevelUpModal />
+      }
+
     </ChallengeContext.Provider>
   );
 }
