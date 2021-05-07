@@ -8,10 +8,10 @@ export const LevelUpModal: React.FC = () => {
   return <div className={styles.overlay}>
     <div className={styles.container}>
       <header>{level}</header>
-      <strong>Parabéns</strong>
-      <p>Você alcançou um novo level</p>
+      <strong>Congratulations</strong>
+      <p>You have achieved a new level</p>
       <button onClick={closeModal}>
-        <img src="icons/close.svg" alt="Fechar Modal" />
+        <img src="icons/close.svg" alt="Close Modal" />
       </button>
     </div>
   </div >;

@@ -6,7 +6,7 @@ export const Profile: React.FC = () => {
   const { level } = useContext(ChallengeContext);
   return (
     <div className={styles.profileContainer}>
-      <img src="https://picsum.photos/200" alt="Random Image" />
+      <img src="https://avatars.githubusercontent.com/u/29710382?v=4" alt="Profile" />
       <div>
         <strong>Bruno Souza</strong>
         <p>

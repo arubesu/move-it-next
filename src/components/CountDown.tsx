@@ -36,7 +36,7 @@ export const CountDown: React.FC = () => {
           <button
             disabled
             className={`${styles.countdownButton} ${styles.countdownButtonFinished} `}
-          >Ciclo Finalizado
+          >Cycle Completed
             <img src="icons/check-circle.svg" alt="Close" />
           </button>
         ) :
@@ -49,7 +49,7 @@ export const CountDown: React.FC = () => {
                       onClick={resetCountDown}
                       type="button"
                       className={`${styles.countdownButton} ${styles.countdownButtonActive}`}
-                    > Abandonar ciclo
+                    > Leave cycle
 
                       <img src="icons/x.svg" alt="Close" />
                     </button>
@@ -59,7 +59,7 @@ export const CountDown: React.FC = () => {
                       onClick={startCountDown}
                       type="button"
                       className={styles.countdownButton}
-                    >Iniciar ciclo
+                    >Start
                       <img src="icons/play.svg" alt="Play" />
                     </button>
                   )

@@ -12,7 +12,7 @@ interface CountdownContextData {
 
 export const CountdownContext = createContext({} as CountdownContextData);
 
-const defaultStartTime = 25 * 60;
+const defaultStartTime = 0.1 * 60;
 let countDownTimeout: NodeJS.Timeout;
 
 export const CountdownContextProvider: React.FC = ({ children }) => {

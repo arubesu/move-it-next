@@ -1,62 +1,62 @@
 [
   {
     "type": "body",
-    "description": "Estique um de seus braços com a palma da mão virada para frente e puxe os dedos para cima por 10 segundos por mão.",
+    "description": "Stretch one of your arms with the palm of the hand facing forward and pull your fingers up for 10 seconds by hand.",
     "amount": 80
   },
   {
     "type": "body",
-    "description": "Estique seu braço contra o peito e puxe-o utilizando o outro braço por 10 segundos por braço.",
+    "description": "Stretch your arm against your chest and pull it using the other arm for 10 seconds by arm.",
     "amount": 60
   },
   {
     "type": "body",
-    "description": "Puxe seu pescoço com a ajuda da mão para a direita e para a esquerda, permanecendo na posição por alguns segundos.",
+    "description": "Pull your neck with the help of the hand to the right and left, remaining in the position for a few seconds.",
     "amount": 70
   },
   {
     "type": "body",
-    "description": "Com as duas mãos na parte de trás da cabeça, leve-a para baixo, alongando a parte de trás da região.",
+    "description": "With both hands on the back of the head, take it down, stretching the back of the region.",
     "amount": 60
   },
   {
     "type": "body",
-    "description": "Cruze as pernas e desça com as mãos esticadas em direção ao chão. Repita o movimento com a outra perna na frente.",
+    "description": "Cross his legs and go down with his hands stretched toward the floor.Repeat the movement with the other leg on the front.",
     "amount": 100
   },
   {
     "type": "body",
-    "description": "Sentado, abra as pernas e tente encostar as palmas das mãos no chão, repita 3 vezes por 5 segundos.",
+    "description": "Sitting, open your legs and try to touch your palms on the floor, repeat 3 times for 5 seconds.",
     "amount": 80
   },
   {
     "type": "body",
-    "description": "Puxe o joelho de encontro ao peito e segure, troque de perna após 10 segundos.",
+    "description": "Pull the knee against the chest and hold, switch off after 10 seconds.",
     "amount": 50
   },
   {
     "type": "body",
-    "description": "Sentado, cruze uma perna e incline seu tronco à frente, troque de perna após 10 segundos.",
+    "description": "Sitting, cross a leg and tilt your trunk ahead, switch from leg after 10 seconds.",
     "amount": 80
   },
   {
     "type": "eye",
-    "description": "Sentado, feche os olhos e cubra-os com as palmas da mão durante 2 minutos, depois abra normalmente.",
+    "description": "Sitting, close your eyes and cover them with your palms for 2 minutes, then open normally.",
     "amount": 90
   },
   {
     "type": "eye",
-    "description": "Em algum ambiente aberto, olhe o mais longe que puder em quatro direções por 3s, mexa apenas os olhos. Repita 3 vezes.",
+    "description": "In some open environment, look as far as you can in four directions for 3s, just stir eyes.Repeat 3 times.",
     "amount": 140
   },
   {
     "type": "eye",
-    "description": "Usando os polegares, massage a área abaixo das sobrancelhas em movimentos circulares por 15 segundos.",
+    "description": "Using thumbs, massage the area below the eyebrows in circular movements for 15 seconds. ",
     "amount": 70
   },
   {
     "type": "body",
-    "description": "Em pé, gire a cintura o máximo que puder para a esquerda, segure por cinco segundos. Repita para a direita.",
+    "description": "Standing, rotate the waist as much as you can to the left, hold for five seconds. Repeat to the right.",
     "amount": 90
   }
 ]

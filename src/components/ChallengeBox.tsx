@@ -34,10 +34,10 @@ export const ChallengeBox: React.FC = () => {
         currentChallenge ?
           (
             <div className={styles.challengeActive}>
-              <header>Ganhe {currentChallenge.amount} XP</header>
+              <header>Gain {currentChallenge.amount} XP</header>
               <main>
                 <img src={`icons/${currentChallenge.type}.svg`} alt="Holding Halteres" />
-                <strong>Novo desafio</strong>
+                <strong>New challenge</strong>
                 <p>{currentChallenge.description}</p>
               </main>
 
@@ -47,14 +47,14 @@ export const ChallengeBox: React.FC = () => {
                   className={styles.challengeFailedButton}
                   onClick={handleChallengeFailed}
                 >
-                  Falhei
+                  Failed
                 </button>
                 <button
                   type="button"
                   className={styles.challengeSucceededButton}
                   onClick={handleChallengeCompleted}
                 >
-                  Completei
+                  Completed
                 </button>
               </footer>
             </div>
@@ -63,12 +63,10 @@ export const ChallengeBox: React.FC = () => {
           (
             <div className={styles.challengeNotActive}>
               <strong>
-                Finalize um ciclo para receber um desafio
-              </strong>
+                Finish a cycle to receive a challenge              </strong>
               <p>
                 <img src="icons/level-up.svg" alt="Level up" />
-                Avance de level completando os desafio
-              </p>
+Level Up by Completing the challenges              </p>
             </div>
           )
       }
